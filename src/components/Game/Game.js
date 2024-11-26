@@ -54,7 +54,6 @@ function Game() {
     }
   }
   useEffect(() => {
-    console.log('guess', { guesses })
     if (correctGuessCount === 1) {
       // すべてのletterが正解の場合、resultをSuccessにする
       setResult('Success')
@@ -63,8 +62,6 @@ function Game() {
       setResult('Failure')
     }
   }, [guesses, correctGuessCount])
-
-  console.log('result', { result })
 
   return (
     <>

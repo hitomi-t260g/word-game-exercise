@@ -5,7 +5,6 @@ import { NUM_OF_GUESSES_ALLOWED } from '../../constants'
 const GuessList = (props) => {
   const { fixedGuesses } = props
 
-  console.log('fixedGuesses: ', fixedGuesses)
   const emptyArray = Array(5).fill('')
 
   return (
