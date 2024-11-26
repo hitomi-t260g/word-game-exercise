@@ -48,11 +48,12 @@ function Game() {
     } else {
       const userGuess = { id: crypto.randomUUID(), text: value, answer: answer }
       // guess配列に新しいguessを追加する
-      // guess stateに新しいguessを追加する
       setGuesses([...guesses, userGuess])
       setValue('')
     }
   }
+  // TODO: リファクタ
+  // correctGuessCountの研鑽をhandleSubmitで実行させ、guessesではなく別の変数に一度guessesを格納することでuseEffectは不要となる
   useEffect(() => {
     if (correctGuessCount === 1) {
       // すべてのletterが正解の場合、resultをSuccessにする
